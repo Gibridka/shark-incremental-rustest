@@ -1,5 +1,5 @@
-// verson translation 0.3.2
-LANGUAGES.RU = {
+// ver translation 0.3.2.3
+    LANGUAGES.RU = {
     name: "Russian",
     inter_name: "Русский",
     icon: "lang-ru",
@@ -101,6 +101,7 @@ LANGUAGES.RU = {
         'tab-black-hole': toTextStyle('Черная Дыра','black-hole'),
         'tab-singularity-milestones': "Вехи "+toTextStyle('Сингулярности','black-hole'),
         'tab-solar-system': "Солнечная Система",
+        'tab-constellation': toTextStyle('Созвездие','star'),
 
         // Elements (Элементы)
 
@@ -162,6 +163,11 @@ LANGUAGES.RU = {
         'observ-div': `У тебя есть <h3>${toTextStyle('0','observ','observ-amount')}</h3> <span id="observ-gain"></span> наблюдений. (<h3>${toTextStyle('0','observ','observ-total')}</h3> всего)`,
         'reserv-div': `У тебя есть <h3>${toTextStyle('0','reserv','reserv-amount')}</h3> <span id="reserv-gain"></span> резерлюдеий.`,
         'traject-div': `У тебя есть <h3>${toTextStyle('0','traject','traject-amount')}</h3> <span id="traject-gain"></span> траекторий.`,
+        'experiment-div': `Текущий уровень ${toTextStyle('Эксперемента','experiment')} - <h3 id="experiment-tier">0</h3>.`,
+
+        'bh-tier-div': `Ранг твоей Черной Дыры равен <h3>${toTextStyle('0','black-hole','bh-tier')}</h3>.`,
+        'bh-tier-button': `Достигни требования, чтобы повысить ранг твою ${toTextStyle('Черную Дыру','black-hole')} для мощной награды.`,
+
 
         // Upgrades
 
@@ -382,10 +388,30 @@ LANGUAGES.RU = {
             'dm6': ["Лучшая Генерация Радиации",`Генератор ${toTextStyle('Радиации '+icon('radioactive'),'core')} увеличивается самостоятельно по экспоненте в уменьшенном порядке.`],
             'dm7': ["Темные остатки",`Вся ${toTextStyle("Темная Материя",'black-hole')} за все время усиливает генерацию ${toTextStyle("Остатка",'black-hole')}.`],
 
-            'm5': ["Рвнг Акулы 'в' Супер Копании",`Усиление Ранга ${toTextStyle("Акулы",'shark')} к Урону Копания теперь влияет на супер урон в уменьшенном порядке.`],
-            'm6': ["Урановая Акула",`'Экспонента Акулы' теперь черзмерно сильная.`],
+            'e7': ["Зондский желоб MK2",`Значительно улучшает прогресс погружения в <b>Индийский океан</b>`],
             
+            'm5': ["Ранг Акулы 'в' Супер Копании",`Усиление Ранга ${toTextStyle("Акулы",'shark')} к Урону Копания теперь влияет на супер урон в уменьшенном порядке.`],
+            'm6': ["Урановая Акула",`'Экспонента Акулы' теперь черзмерно сильная.`],
+            'm7': ["Двойное Масштабирование Остатка",`Первое масштабирование ${toTextStyle("Остаточных",'black-hole')} улучшений отдаленно на <b>+100</b>.`],
+            'm8': ["Ультимативная Радиация",`Эффект 14ого радиоактивного бонуса улучшен.`],
+            'm9': [`Никакого Переизбытка Радиации`,`Софткап производства ${toTextStyle('Радиации '+icon('radioactive'),'core')} будет убран.`],
+            'm10': [`Авто-Реактор MK2`,`Авто-Реактор ${toTextStyle('Ядра','core')} теперь влияет на третий ряд реакторов ${toTextStyle('Ядра','core')}.`],
+            'm11': [`Авто-Улучшение Копания MK2`,`Авто-Улучшение Копания теперь влияет на все улучшения Копания ${toTextStyle('Акулы','shark')}.`],
+
+            // я остановился здечь
             'o1': [`Автоматизация Обсерватории`,`Автоматизирует все улучшения Наблюдения без траты валюты. <i>Это улчшение не сбрасывается.</i>`],
+            'o2': [`Привлечение Универсального Обменика`,`“Универсальный Exchangeя очередь” ${toTextStyle('Reservatory','reserv')} upgrade affects the base of “The Space”, “Space Fish”, and “Space Prestige” ${toTextStyle('Observatory','observ')} upgrades.`],
+            'o3': [`Привлечение Универсального Обменика II`,`“Universal Exchanger” ${toTextStyle('Reservatory','reserv')} upgrade affects the base of the “The Relative”, “Observable”, “Space Fish II”, and “Space Prestige II” ${toTextStyle('Reservatory','reserv')} upgrades.`],
+            
+            'r1': [`Автоматизация Резерлюдения`,`Automates all ${toTextStyle('Reservatory','reserv')} upgrades without spending currencies. <i>This research doesn’t get reset.</i>`],
+            'r2': [`Улучшение Резерлюдения`,`Improves ${toTextStyle('Reservatory','reserv')} gain formula even better.`],
+            'r3': [`Генерация Резерлюдения`,`Generates 100% of your ${toTextStyle('Reservatories','reserv')} gained on reset. <i>This research doesn’t get reset.</i>`],
+        
+            't1': [`Trajectory Automation`,`Automates all ${toTextStyle('Trajectory','traject')} upgrades without spending currencies. <i>This research doesn’t get reset.</i>`],
+            't2': [`Trajectory Improvement`,`Improves ${toTextStyle('Trajectory','traject')} gain formula even better.`],
+            't3': [`Trajectory Generation`,`Generates 100% of your ${toTextStyle('Trajectories','traject')} gained on reset. <i>This research doesn’t get reset.</i>`],
+        },
+
         },
 
         // Exploration (Исследования)
