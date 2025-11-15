@@ -1,4 +1,4 @@
-// verson translation 0.3.2
+// version translation 1.0. finally.
 LANGUAGES.RU = {
     name: "Russian",
     inter_name: "Русский",
@@ -71,7 +71,9 @@ LANGUAGES.RU = {
 
         'curr-top-5-req': x => `Набрать <b>${format(x)}</b> ${toTextStyle('Резевлюдений','reserv')}`, 
         'curr-top-5-reset': x => `Провести рассчет ради <b>${format(x,0)}</b> ${toTextStyle('Траекторий','traject')}`,
-        
+
+        'curr-top-6-req': x => `Набрать <b>${format(x)}</b> ${toTextStyle('Рыб','fish')}`, 
+        'curr-top-6-reset': (x,next) => `Адронизировать ради <b>${format(x,0)}</b> ${toTextStyle('Фундаментальные частиц','hadron')} (Следующая на <b>${format(next)}</b> ${toTextStyle('Рыб','fish')})`,
 
         'radioactive-name': toTextStyle('Радиация '+icon("radioactive"),'core'),
         // Tabs (Вкладки)
@@ -101,23 +103,39 @@ LANGUAGES.RU = {
         'tab-black-hole': toTextStyle('Черная Дыра','black-hole'),
         'tab-singularity-milestones': "Вехи "+toTextStyle('Сингулярности','black-hole'),
         'tab-solar-system': "Солнечная Система",
+        'tab-constellation': toTextStyle('Созвездия','star'),
+
+        'tab-hadron': toTextStyle('Адроны','hadron'),
+        'tab-hadron-su': "Стартовые Улучшения",
+        'tab-shark-tier': toTextStyle('Акулий','shark') + " Тир",
+        'tab-nucleobase': "Нуклеиновые Основания",
+        'tab-gal-explore': "Галактические Исследования",
+        'tab-dna': "ДНК",
+
+        'tab-shark-upgs': toTextStyle('Акулии','shark') + " Улучшения",
+
 
         // Elements (Элементы)
 
         'fish-div': `Ваша ${toTextStyle('Акула','shark')} съела <h2>${toTextStyle('0','fish','fish-amount')}</h2> <span id="fish-gain"></span> рыб.`,
         'shark-stats': `Статистика ${toTextStyle('Акулы','shark')}<br>Уровень: <h4 id="shark-level">???</h4><br>Ранг: <h4 id="shark-tier">???</h4>`,
 
-        'shark-elo-div': `ELO твоей ${toTextStyle('Акулы','shark')}  равно <h3>${toTextStyle('0','humanoid','shark-elo')}</h3>.`,
-        'shark-rank-div': `Твой ${toTextStyle('Акульий','shark')} Ранг равен <h3 id="shark-rank">0</h3>.`,
-        'shark-rank-req-div': `Следующий ранг требует ELO ${toTextStyle('Акулы','shark')} равно <h4>${toTextStyle('0','humanoid','shark-rank-req')}</h4>.`,
+        'shark-elo-div': `ELO твоей ${toTextStyle('Акулы','shark')} - <h3>${toTextStyle('0','humanoid','shark-elo')}</h3>.`,
+        'shark-rank-div': `Твой ${toTextStyle('Акульий','shark')} Ранг - <h3 id="shark-rank">0</h3>.`,
+        'shark-rank-req-div': `Следующий ранг требует ELO ${toTextStyle('Акулы','shark')} равный <h4>${toTextStyle('0','humanoid','shark-rank-req')}</h4>.`,
         'shark-rank-note': `Примечание: Акульий ранг будет сброшен при Эволюционном сбросе`,
+
+        'shark-iq-div': `IQ твоей ${toTextStyle('Акулы','shark')} - <h3>${toTextStyle('0','hadron','shark-iq')}</h3>.`,
+        'shark-tier-div': `Твой ${toTextStyle('Акулий','shark')} Тир равен <h3 id="shark-tier2">0</h3>.`,
+        'shark-tier-req-div': `Следующий тир требует <h4>${toTextStyle('0','hadron','shark-tier-req')} IQ ${toTextStyle('Акулы','shark')}</h4>.`,
+        'shark-tier-note': `Примечание: Акульий тир будет сброшен при Адроном сбросе`,
 
         'option-title-1': "Основные Настройки",
         'option-title-2': "Запись Чисел",
         'option-title-3': "Подтверждения",
         'option-title-4': "Языки",
 
-        'offline-speed': "Ускорить Оффлайн Скорость",
+        'offline-speed': "Ускорить Оффлайн Рассчёт",
         'offline-done': "Завершено!",
 
         'radioactive-div': `${toTextStyle('Ядро','core')} создало <h3>${toTextStyle('0 / 1,000 '+icon("radioactive"),'core','radioactive-amount')}</h3> <span id="radioactive-gain"></span>.`,
@@ -162,6 +180,23 @@ LANGUAGES.RU = {
         'observ-div': `У тебя есть <h3>${toTextStyle('0','observ','observ-amount')}</h3> <span id="observ-gain"></span> наблюдений. (<h3>${toTextStyle('0','observ','observ-total')}</h3> всего)`,
         'reserv-div': `У тебя есть <h3>${toTextStyle('0','reserv','reserv-amount')}</h3> <span id="reserv-gain"></span> резерлюдеий.`,
         'traject-div': `У тебя есть <h3>${toTextStyle('0','traject','traject-amount')}</h3> <span id="traject-gain"></span> траекторий.`,
+        'experiment-div': `Твой ${toTextStyle('Эксперементальный','experiment')} Тир равен <h3 id="experiment-tier">0</h3>.`,
+
+        'bh-tier-div': `Тир твой Черной Дыры - <h3>${toTextStyle('0','black-hole','bh-tier')}</h3>.`,
+        'bh-tier-button': `Достигни требования, чтобы улучшить Тир твоей ${toTextStyle('Черной Дыры','black-hole')} ради мощных улучшения.`,
+
+        'fundamental-amount-div': `У тебя есть всего <h3>${toTextStyle('0','hadron','total-fundamental')}</h3> фундаментальные частиц, что увеличили предел ${toTextStyle('Рыбы','fish')} до <h3 id="fundamental-effect">???</h3>.`,
+        'starter-upg-note': `Примечания: Стоймость улучшений <b>удваивается</b> при каждом купленном улучшении. <b>РЕКОМЕНДУЕМ</b> после первого перезапуска взять первое улучшение.`,
+
+        "dna-descirption": `Длина твоей ${toTextStyle('Акулий','shark')} <b>ДНК (Дезоксирибонуклеиновая кислота)</b> равна <h3 id="dna-length">???</h3> (<span id="dna-length-gain">???</span>) нанометров.<br>
+        Увеличивает tetration of ${toTextStyle('Fish','fish')} by <h4 id="dna-boost1">???</h4> and strengthens the first 4 Nucleobases by <h4 id="dna-boost2">???</h4>.`,
+        "dna-button": `Force a ${toTextStyle('Hadronize','hadron')} reset to expand DNA.`,
+        'dna-note': `Note: Extending DNA resets everything ${toTextStyle('Hadronize','hadron')} does, as well as ${toTextStyle('Fundamental Particles','hadron')} and Nucleobases.`,
+
+        'shark-worth': bool => bool ? `Absorb ${toColoredText('absolutely everything','red')} to transform your ${toTextStyle('Shark','shark')} into the <h3>${toTextStyle('Omnipotence','omni')}</h3>...` : `Your ${toTextStyle('Shark','shark')} is worthless, sorry...`,
+        
+        'research-all-btn': "Attempt to purchase all possible research.",
+
 
         // Upgrades
 
